@@ -1,0 +1,213 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+/* ==== Header ==== */
+header {
+    background: #0056a3;
+    color: white;
+    padding: 10px 20px; /* padding sedikit lebih kecil biar proporsional */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Bungkus logo dan teks */
+header .logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+header .logo-wrap img {
+    height: 50px; /* Tinggi logo disesuaikan */
+    max-height: 100%;
+    width: auto;
+    filter: none !important;
+    -webkit-filter: none !important;
+}
+
+header .judul h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+header .judul p {
+    margin: 3px 0 0;
+    font-size: 1rem;
+}
+
+/* ==== Tombol umum ==== */
+button {
+    background: #ff9800;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+/* ==== Table ==== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background: #0074cc;
+    color: white;
+}
+
+/* ==== Popup Form Background ==== */
+#popup-form {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* ==== Kotak Form ==== */
+#popup-form .isi-popup {
+    background: #fefefe;
+    padding: 20px;
+    border-radius: 12px;
+    width: 320px;
+    max-width: 90%;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+/* Animasi Muncul */
+@keyframes fadeIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* ==== Judul Form ==== */
+#popup-form h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #0056a3;
+}
+
+/* ==== Label ==== */
+#popup-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* ==== Input, Select, Textarea ==== */
+#popup-form input,
+#popup-form select,
+#popup-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    background: #f9f9f9;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+    transition: border-color 0.3s, background 0.3s;
+}
+
+#popup-form input:focus,
+#popup-form select:focus,
+#popup-form textarea:focus {
+    border-color: #ff9800;
+    background: #fff;
+    outline: none;
+}
+
+/* ==== Canvas TTD ==== */
+canvas {
+    width: 100%;
+    height: 120px;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+/* ==== Tombol di Form ==== */
+#popup-form button {
+    margin-top: 5px;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Tombol Hapus TTD */
+#popup-form .hapus-ttd {
+    background: #ff9800;
+    color: white;
+}
+
+#popup-form .hapus-ttd:hover {
+    background: #e68a00;
+}
+
+/* Tombol Simpan */
+#popup-form button[type="submit"] {
+    background: #6657ea;
+    color: white;
+}
+
+#popup-form button[type="submit"]:hover {
+    background: #6657ea;
+}
+
+/* Tombol Batal */
+#popup-form button#tutup-popup {
+    background: #dc3545;
+    color: white;
+}
+
+#popup-form button#tutup-popup:hover {
+    background: #c82333;
+}
+
+/* ==== Responsif untuk HP ==== */
+@media (max-width: 480px) {
+    #popup-form .isi-popup {
+        width: 90%;
+        padding: 15px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .logo-wrap {
+        margin-bottom: 10px;
+    }
+
+    header .logo-wrap img {
+        height: 45px; /* versi mobile lebih kecil */
+    }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buku Agenda Kunjungan - Bappeda Lampung</title>
+    <link rel="stylesheet" href="gaya.css">
+</head>
+<body>
+    <header>
+        <div class="logo-wrap">
+            <img src="logo bappeda.png" alt="Logo Bappeda Lampung" style="filter:none;">
+            <div class="judul">
+                <h1>Buku Agenda Kunjungan</h1>
+                <p>BAPPEDA Provinsi Lampung</p>
+            </div>
+        </div>
+        <button id="tombol-tambah">Tambah Data</button>
+    </header>
+
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>No Urut</th>
+                    <th>Tanggal Kunjungan</th>
+                    <th>No SPT / Perihal</th>
+                    <th>Nama</th>
+                    <th>Dinas</th>
+                    <th>Tanda Tangan</th>
+                </tr>
+            </thead>
+            <tbody id="isi-tabel"></tbody>
+        </table>
+    </main>
+
+    <!-- Popup Form -->
+    <div id="popup-form" class="tersembunyi">
+        <div class="isi-popup">
+            <h2>Tambah Kunjungan</h2>
+            <form id="form-kunjungan">
+                <label>No Urut:
+                    <input type="text" id="no-urut" required>
+                </label>
+                <label>Tanggal Kunjungan:
+                    <input type="date" id="tanggal" required>
+                </label>
+                <label>No SPT / Perihal:
+                    <input type="text" id="no-spt" required>
+                </label>
+                <label>Nama:
+                    <input type="text" id="nama" required>
+                </label>
+                <label>Dinas:
+                    <input type="text" id="dinas" required>
+                </label>
+                
+                <label>Tanda Tangan:</label>
+                <canvas id="canvas-ttd"></canvas>
+                <button type="button" class="hapus-ttd" id="hapus-ttd">Hapus Tanda Tangan</button>
+                
+                <button type="submit">Simpan</button>
+                <button type="button" id="tutup-popup">Batal</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
